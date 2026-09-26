@@ -71,6 +71,7 @@ function validarLongitud(numero, maxLongitud) {
 // Ejemplo de uso:
 console.log(validarLongitud(12345, 5)); // true
 ```
+![Validación de Correo](img/validarlongitud.jpg)
 
 ### 4. Cálculo de Edad y si es mayor de Edad
 Determina los años cumplidos de un usuario a partir de su fecha de nacimiento y valida si tiene 18 años o más.
@@ -98,6 +99,7 @@ function esMayorDeEdad(fechaNacimiento) {
 // Ejemplo de uso:
 console.log(esMayorDeEdad('2000-05-15')); // true
 ```
+![Validación de Correo](img/validarletras.jpg)
 
 ### 5. Función calcularEdad
 Calcula la edad en años enteros a partir de una fecha de nacimiento ingresada en formato AAAA-MM-DD.
@@ -120,6 +122,7 @@ function calcularEdad(fechaNacimiento) {
 // Ejemplo de uso:
 console.log(calcularEdad('2002-05-15')); // Output: Edad en números
 ```
+![Validación de Correo](img/validarletras.jpg)
 
 ### 6. Función esMayorDeEdad
 Determina si una persona tiene 18 años o más utilizando la función calcularEdad.
@@ -133,6 +136,7 @@ function esMayorDeEdad(fechaNacimiento) {
 // Ejemplo de uso:
 console.log(esMayorDeEdad('2000-01-01')); // Output: true
 ```
+![Validación de Correo](img/validarletras.jpg)
 
 ### 7. Formato Telefónico a 10 Dígitos
 Convierte cualquier entrada numérica válida de 10 dígitos al estándar (XXX) XXX-XXXX.
@@ -148,6 +152,7 @@ function formatearTelefono(telefono) {
 // Ejemplo de uso:
 console.log(formatearTelefono('5512345678')); // (551) 234-5678
 ```
+![Validación de Correo](img/validarletras.jpg)
 
 ### 8. Capitalización de Texto
 Aplica formato de nombre propio convirtiendo la primera letra de cada palabra a mayúscula.
@@ -167,6 +172,7 @@ function capitalizarTexto(texto) {
 // Ejemplo de uso:
 console.log(capitalizarTexto('juan torres')); // Juan Torres
 ```
+![Validación de Correo](img/validarletras.jpg)
 
 Capturas de pantalla (consola mostrando resultados)
 Video corto (máx. 1 min): graba tu voz usando tu librería como si fuera un demo promocional, muestra el problema que resuelve, cómo se usa, y el resultado en acción (mensaje en consola, alerta, cambio en la página). No es solo "correr el código", es vender tu librería en 60 segundos.
