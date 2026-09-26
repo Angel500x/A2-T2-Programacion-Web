@@ -56,6 +56,7 @@ function soloLetras(texto) {
 console.log(soloLetras('Juan Perez')); // true
 console.log(soloLetras('Juan123'));     // false
 ```
+![Validación de Correo](img/validarletras.jpg)
 
 ### 3. Longitud Máxima de Números
 Verifica que un valor numérico no exceda la cantidad de dígitos permitidos.
