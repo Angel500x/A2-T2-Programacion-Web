@@ -34,7 +34,7 @@ function validarCorreo(correo) {
     
     const dominioIngresado = coincidencia[1];
     return dominiosPermitidos.includes(dominioIngresado);
-}
+}```
 
 ```// Ejemplo de uso:
 console.log(validarCorreo('contacto@gmail.com')); // true
