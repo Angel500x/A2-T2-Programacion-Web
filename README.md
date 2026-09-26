@@ -136,7 +136,7 @@ function esMayorDeEdad(fechaNacimiento) {
 // Ejemplo de uso:
 console.log(esMayorDeEdad('2000-01-01')); // Output: true
 ```
-![Validación de Correo](img/validarletras.jpg)
+![Validación de Correo](img/validaredad.jpg)
 
 ### 7. Formato Telefónico a 10 Dígitos
 Convierte cualquier entrada numérica válida de 10 dígitos al estándar (XXX) XXX-XXXX.
@@ -152,7 +152,7 @@ function formatearTelefono(telefono) {
 // Ejemplo de uso:
 console.log(formatearTelefono('5512345678')); // (551) 234-5678
 ```
-![Validación de Correo](img/validarletras.jpg)
+![Validación de Correo](img/formatel.jpg)
 
 ### 8. Capitalización de Texto
 Aplica formato de nombre propio convirtiendo la primera letra de cada palabra a mayúscula.
@@ -172,7 +172,7 @@ function capitalizarTexto(texto) {
 // Ejemplo de uso:
 console.log(capitalizarTexto('juan torres')); // Juan Torres
 ```
-![Validación de Correo](img/validarletras.jpg)
+![Validación de Correo](img/captexto.jpg)
 
 Capturas de pantalla (consola mostrando resultados)
 Video corto (máx. 1 min): graba tu voz usando tu librería como si fuera un demo promocional, muestra el problema que resuelve, cómo se usa, y el resultado en acción (mensaje en consola, alerta, cambio en la página). No es solo "correr el código", es vender tu librería en 60 segundos.
