@@ -13,12 +13,13 @@ Para utilizar **Utileria.js**, se debe tener el archivo `utileria.js`, y colocar
 ```html <script src="js/utileria.js"></script>```
 
 ## EJEMPLOS DE CODIGO EMBEBIDO
+---
+### 1. Validación de Correo con Dominios Permitidos
+Valida el formato básico y restringe el registro únicamente a proveedores de correo válidos (`gmail`, `outlook`, `hotmail`, `yahoo`, `icloud`).
 
-```// las primera 6 funciones
- // Valida si un texto tiene un formato de correo electrónico válido.
+```javascript
 function validarCorreo(correo) {
     if (!correo) return false;
-    // Dominios permitidos (puedes agregar más a esta lista)
     const dominiosPermitidos = [
         'gmail.com',
         'outlook.com',
@@ -27,33 +28,49 @@ function validarCorreo(correo) {
         'yahoo.com',
         'icloud.com'
     ];
-    // Validación de formato básico de correo
     const regexFormato = /^[^\s@]+@([^\s@]+\.[^\s@]+)$/;
     const coincidencia = correo.toLowerCase().trim().match(regexFormato);
-    if (!coincidencia) {
-        return false; // No tiene estructura de correo
-    }
-    const dominioIngresado = coincidencia[1]; // Extrae lo que está después del @
-    // Comprueba si el dominio ingresado está en la lista de permitidos
+    if (!coincidencia) return false;
+    
+    const dominioIngresado = coincidencia[1];
     return dominiosPermitidos.includes(dominioIngresado);
-}```
+}
 
+```// Ejemplo de uso:
+console.log(validarCorreo('contacto@gmail.com')); // true
+console.log(validarCorreo('usuario@falso.com'));  // false
 
-``` // Valida que una cadena contenga exclusivamente letras.
+2. Validar Solo Letras
+Comprueba que el texto contenga exclusivamente caracteres alfabéticos, acentos y espacios.
+
+JavaScript
 function soloLetras(texto) {
     if (typeof texto !== 'string' || texto.trim() === '') return false;
     const regex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
     return regex.test(texto);
-}```
+}
 
- // Valida que la representación en texto de un número no exceda una longitud máxima.
+// Ejemplo de uso:
+console.log(soloLetras('Juan Perez')); // true
+console.log(soloLetras('Juan123'));     // false
+
+3. Longitud Máxima de Números
+Verifica que un valor numérico no exceda la cantidad de dígitos permitidos.
+
+JavaScript
 function validarLongitud(numero, maxLongitud) {
     if (numero === null || numero === undefined || isNaN(numero)) return false;
     const strNumero = String(numero).trim();
     return strNumero.length <= maxLongitud;
 }
 
-// Calcula la edad en años enteros a partir de una fecha de nacimiento.
+// Ejemplo de uso:
+console.log(validarLongitud(12345, 5)); // true
+
+4. Cálculo de Edad y Mayoría de Edad
+Determina los años cumplidos de un usuario a partir de su fecha de nacimiento y valida si tiene 18 años o más.
+
+JavaScript
 function calcularEdad(fechaNacimiento) {
     const nacimiento = new Date(fechaNacimiento);
     if (isNaN(nacimiento.getTime())) return NaN;
@@ -65,26 +82,34 @@ function calcularEdad(fechaNacimiento) {
     if (diferenciaMeses < 0 || (diferenciaMeses === 0 && hoy.getDate() < nacimiento.getDate())) {
         edad--;
     }
-
     return edad;
 }
 
-// Determina si una persona es mayor o igual a 18 años a partir de su fecha de nacimiento.
 function esMayorDeEdad(fechaNacimiento) {
     const edad = calcularEdad(fechaNacimiento);
     return !isNaN(edad) && edad >= 18;
 }
 
-// Valida la fortaleza de una contraseña.
+// Ejemplo de uso:
+console.log(esMayorDeEdad('2000-05-15')); // true
+
+5. Validar Fortaleza de Contraseña
+Exige al menos 8 caracteres, incluyendo una letra mayúscula, una minúscula, un número y un carácter especial.
+
+JavaScript
 function validarPassword(password) {
     if (typeof password !== 'string') return false;
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&._\-#])[A-Za-z\d@$!\%*?&._\-#]{8,}$/;
     return regex.test(password);
 }
 
-// 2 FUNCIONES ADICIONALES
+// Ejemplo de uso:
+console.log(validarPassword('Pass1234#')); // true
 
-// Formatea un número o cadena a un formato telefónico si tiene EXACTAMENTE 10 dígitos
+6. Formato Telefónico a 10 Dígitos
+Convierte cualquier entrada numérica válida de 10 dígitos al estándar (XXX) XXX-XXXX.
+
+JavaScript
 function formatearTelefono(telefono) {
     if (!telefono) return '';
     const limpiado = String(telefono).replace(/\D/g, '');
@@ -92,7 +117,13 @@ function formatearTelefono(telefono) {
     return `(${limpiado.slice(0, 3)}) ${limpiado.slice(3, 6)}-${limpiado.slice(6)}`;
 }
 
-//Capitaliza un texto convirtiendo la primera letra de cada palabra a mayúscula.
+// Ejemplo de uso:
+console.log(formatearTelefono('5512345678')); // (551) 234-5678
+
+7. Capitalización de Texto
+Aplica formato de nombre propio convirtiendo la primera letra de cada palabra a mayúscula.
+
+JavaScript
 function capitalizarTexto(texto) {
     if (typeof texto !== 'string' || texto.trim() === '') return '';
     return texto
@@ -104,6 +135,10 @@ function capitalizarTexto(texto) {
         .join(' ');
 }
 
+// Ejemplo de uso:
+console.log(capitalizarTexto('angel juan torres')); // Angel Juan Torres
+
+---
 
 Capturas de pantalla (consola mostrando resultados)
 Video corto (máx. 1 min): graba tu voz usando tu librería como si fuera un demo promocional, muestra el problema que resuelve, cómo se usa, y el resultado en acción (mensaje en consola, alerta, cambio en la página). No es solo "correr el código", es vender tu librería en 60 segundos.
