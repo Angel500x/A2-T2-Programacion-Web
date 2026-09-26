@@ -99,7 +99,7 @@ function esMayorDeEdad(fechaNacimiento) {
 // Ejemplo de uso:
 console.log(esMayorDeEdad('2000-05-15')); // true
 ```
-![Validación de Correo](img/validarletras.jpg)
+![Validación de Correo](img/mayoredad.jpg)
 
 ### 5. Función calcularEdad
 Calcula la edad en años enteros a partir de una fecha de nacimiento ingresada en formato AAAA-MM-DD.
@@ -122,7 +122,7 @@ function calcularEdad(fechaNacimiento) {
 // Ejemplo de uso:
 console.log(calcularEdad('2002-05-15')); // Output: Edad en números
 ```
-![Validación de Correo](img/validarletras.jpg)
+![Validación de Correo](img/calcularedad.jpg)
 
 ### 6. Función esMayorDeEdad
 Determina si una persona tiene 18 años o más utilizando la función calcularEdad.
