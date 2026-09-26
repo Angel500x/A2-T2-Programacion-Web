@@ -41,14 +41,9 @@ console.log(validarCorreo('contacto@gmail.com')); // true
 console.log(validarCorreo('usuario@falso.com'));  // false
 ```
 
-
-
-
-
-
-2. Validar Solo Letras
+### 2. Validar Solo Letras
 Comprueba que el texto contenga exclusivamente caracteres alfabéticos, acentos y espacios.
-
+```
 JavaScript
 function soloLetras(texto) {
     if (typeof texto !== 'string' || texto.trim() === '') return false;
@@ -59,10 +54,11 @@ function soloLetras(texto) {
 // Ejemplo de uso:
 console.log(soloLetras('Juan Perez')); // true
 console.log(soloLetras('Juan123'));     // false
+```
 
-3. Longitud Máxima de Números
+### 3. Longitud Máxima de Números
 Verifica que un valor numérico no exceda la cantidad de dígitos permitidos.
-
+```
 JavaScript
 function validarLongitud(numero, maxLongitud) {
     if (numero === null || numero === undefined || isNaN(numero)) return false;
@@ -72,10 +68,11 @@ function validarLongitud(numero, maxLongitud) {
 
 // Ejemplo de uso:
 console.log(validarLongitud(12345, 5)); // true
+```
 
-4. Cálculo de Edad y Mayoría de Edad
+### 4. Cálculo de Edad y si es mayor de Edad
 Determina los años cumplidos de un usuario a partir de su fecha de nacimiento y valida si tiene 18 años o más.
-
+```
 JavaScript
 function calcularEdad(fechaNacimiento) {
     const nacimiento = new Date(fechaNacimiento);
@@ -98,23 +95,46 @@ function esMayorDeEdad(fechaNacimiento) {
 
 // Ejemplo de uso:
 console.log(esMayorDeEdad('2000-05-15')); // true
+```
 
-5. Validar Fortaleza de Contraseña
-Exige al menos 8 caracteres, incluyendo una letra mayúscula, una minúscula, un número y un carácter especial.
-
+### 5. Función calcularEdad
+Calcula la edad en años enteros a partir de una fecha de nacimiento ingresada en formato AAAA-MM-DD.
+```
 JavaScript
-function validarPassword(password) {
-    if (typeof password !== 'string') return false;
-    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&._\-#])[A-Za-z\d@$!\%*?&._\-#]{8,}$/;
-    return regex.test(password);
+function calcularEdad(fechaNacimiento) {
+    const nacimiento = new Date(fechaNacimiento);
+    if (isNaN(nacimiento.getTime())) return NaN;
+
+    const hoy = new Date();
+    let edad = hoy.getFullYear() - nacimiento.getFullYear();
+    const diferenciaMeses = hoy.getMonth() - nacimiento.getMonth();
+
+    if (diferenciaMeses < 0 || (diferenciaMeses === 0 && hoy.getDate() < nacimiento.getDate())) {
+        edad--;
+    }
+    return edad;
 }
 
 // Ejemplo de uso:
-console.log(validarPassword('Pass1234#')); // true
+console.log(calcularEdad('2002-05-15')); // Output: Edad en números
+```
 
-6. Formato Telefónico a 10 Dígitos
+### 6. Función esMayorDeEdad
+Determina si una persona tiene 18 años o más utilizando la función calcularEdad.
+```
+JavaScript
+function esMayorDeEdad(fechaNacimiento) {
+    const edad = calcularEdad(fechaNacimiento);
+    return !isNaN(edad) && edad >= 18;
+}
+
+// Ejemplo de uso:
+console.log(esMayorDeEdad('2000-01-01')); // Output: true
+```
+
+### 7. Formato Telefónico a 10 Dígitos
 Convierte cualquier entrada numérica válida de 10 dígitos al estándar (XXX) XXX-XXXX.
-
+```
 JavaScript
 function formatearTelefono(telefono) {
     if (!telefono) return '';
@@ -125,10 +145,11 @@ function formatearTelefono(telefono) {
 
 // Ejemplo de uso:
 console.log(formatearTelefono('5512345678')); // (551) 234-5678
+```
 
-7. Capitalización de Texto
+### 8. Capitalización de Texto
 Aplica formato de nombre propio convirtiendo la primera letra de cada palabra a mayúscula.
-
+```
 JavaScript
 function capitalizarTexto(texto) {
     if (typeof texto !== 'string' || texto.trim() === '') return '';
@@ -142,9 +163,8 @@ function capitalizarTexto(texto) {
 }
 
 // Ejemplo de uso:
-console.log(capitalizarTexto('angel juan torres')); // Angel Juan Torres
-
----
+console.log(capitalizarTexto('juan torres')); // Juan Torres
+```
 
 Capturas de pantalla (consola mostrando resultados)
 Video corto (máx. 1 min): graba tu voz usando tu librería como si fuera un demo promocional, muestra el problema que resuelve, cómo se usa, y el resultado en acción (mensaje en consola, alerta, cambio en la página). No es solo "correr el código", es vender tu librería en 60 segundos.
