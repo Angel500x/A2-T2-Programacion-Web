@@ -36,7 +36,7 @@ function validarCorreo(correo) {
     return dominiosPermitidos.includes(dominioIngresado);
 }
 
-```// Ejemplo de uso:
+// Ejemplo de uso:
 console.log(validarCorreo('contacto@gmail.com')); // true
 console.log(validarCorreo('usuario@falso.com'));  // false
 
