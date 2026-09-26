@@ -40,8 +40,7 @@ function validarCorreo(correo) {
 console.log(validarCorreo('contacto@gmail.com')); // true
 console.log(validarCorreo('usuario@falso.com'));  // false
 ```
-![Pruebas en Consola](<img width="463" height="106" alt="image" src="https://github.com/user-attachments/assets/ccf1459a-30ac-49cb-a735-0eb47696047c" />
-)
+![image](https://github.com/user-attachments/assets/12345-abcde...)
 
 ### 2. Validar Solo Letras
 Comprueba que el texto contenga exclusivamente caracteres alfabéticos, acentos y espacios.
