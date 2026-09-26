@@ -12,7 +12,7 @@ para validar y ser utilizadas en un formulario y login con html y css
 Para utilizar **Utileria.js**, se debe tener el archivo `utileria.js`, y colocarlo en el proyecto dentro de `/js` e impórtalo en el `<head>` del html o antes de cerrar el `</body>`:
 ```html <script src="js/utileria.js"></script>```
 
-## EJEMPLOS DE CODIGO EMBEBIDO
+## EJEMPLOS DE CODIGO EMBEBIDO y capturas
 ---
 ### 1. Validación de Correo con Dominios Permitidos
 Valida el formato básico y restringe el registro únicamente a proveedores de correo válidos (`gmail`, `outlook`, `hotmail`, `yahoo`, `icloud`).
@@ -174,5 +174,5 @@ console.log(capitalizarTexto('juan torres')); // Juan Torres
 ```
 ![Validación de Correo](img/captexto.jpg)
 
-Capturas de pantalla (consola mostrando resultados)
-Video corto (máx. 1 min): graba tu voz usando tu librería como si fuera un demo promocional, muestra el problema que resuelve, cómo se usa, y el resultado en acción (mensaje en consola, alerta, cambio en la página). No es solo "correr el código", es vender tu librería en 60 segundos.
+## Video
+▶️ **[Ver Demo Promocional en YouTube](TU_LINK_DE_YOUTUBE)**
