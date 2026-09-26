@@ -17,7 +17,7 @@ Para utilizar **Utileria.js**, se debe tener el archivo `utileria.js`, y colocar
 ### 1. Validación de Correo con Dominios Permitidos
 Valida el formato básico y restringe el registro únicamente a proveedores de correo válidos (`gmail`, `outlook`, `hotmail`, `yahoo`, `icloud`).
 
-```javascript
+javascript
 function validarCorreo(correo) {
     if (!correo) return false;
     const dominiosPermitidos = [
@@ -34,7 +34,7 @@ function validarCorreo(correo) {
     
     const dominioIngresado = coincidencia[1];
     return dominiosPermitidos.includes(dominioIngresado);
-}```
+}
 
 ```// Ejemplo de uso:
 console.log(validarCorreo('contacto@gmail.com')); // true
