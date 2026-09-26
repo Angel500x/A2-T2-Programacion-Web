@@ -136,7 +136,7 @@ function esMayorDeEdad(fechaNacimiento) {
 // Ejemplo de uso:
 console.log(esMayorDeEdad('2000-01-01')); // Output: true
 ```
-![Validación de Correo](img/validaredad.jpg)
+![Validación de Correo](img/calcularmayor.jpg)
 
 ### 7. Formato Telefónico a 10 Dígitos
 Convierte cualquier entrada numérica válida de 10 dígitos al estándar (XXX) XXX-XXXX.
