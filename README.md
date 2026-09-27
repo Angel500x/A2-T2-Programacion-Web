@@ -175,4 +175,4 @@ console.log(capitalizarTexto('juan torres')); // Juan Torres
 ![Validación de Correo](img/captexto.jpg)
 
 ## Video
-▶️ **[Ver Demo Promocional en YouTube](https://youtu.be/MD07rbT963Q?si=ppeLjenNSDGI301h)**
+▶️ **[Ver YouTube](https://youtu.be/MD07rbT963Q?si=ppeLjenNSDGI301h)**
